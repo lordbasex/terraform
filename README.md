@@ -41,6 +41,12 @@ terraform plan
 terraform apply
 ```
 
+### Destroy 
+```
+cd /root/terraform/aws/01_vpc
+terraform destroy
+```
+
 ### Interesting commands
 ```
 terraform fmt
