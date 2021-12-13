@@ -35,7 +35,7 @@ terraform -help
 ```
 cd /root
 git clone https://github.com/lordbasex/terraform.git
-cd /root/terraform/aws/01_vpc
+cd /root/terraform/aws/01_vpc-hardcoded
 terraform init
 terraform plan
 terraform apply
