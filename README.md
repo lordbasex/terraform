@@ -31,25 +31,29 @@ yum -y install terraform git
 terraform -help
 ```
 
-## Deploy
+## Clone
 ```
 cd /root
 git clone https://github.com/lordbasex/terraform.git
-cd /root/terraform/aws/01_vpc-hardcoded
+```
+
+## Step
+
+### Step 00 - 01_s3 
+
+```
+cd /root/terraform/aws/00_step/01_s3/
+```
+
+```
+cat > terraform.tfvars <<ENDLINE
+project_name = "xxxxxxxxxx"
+aws_region   = "us-east-1"
+ENDLINE
+```
+
+```
 terraform init
 terraform plan
 terraform apply
-```
-
-### Destroy 
-```
-cd /root/terraform/aws/01_vpc
-terraform destroy
-```
-
-### Interesting commands
-```
-terraform fmt
-terraform validate
-terraform output
 ```
