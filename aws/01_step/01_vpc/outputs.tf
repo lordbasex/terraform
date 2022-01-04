@@ -15,14 +15,29 @@ output "private_subnets" {
   value       = module.vpc.private_subnets
 }
 
+output "private_subnet_cidr_blocks" {
+  description = "List of IDs of private subnets cidr_blocks"
+  value       = var.private_subnet_cidr_blocks
+}
+
 output "public_subnets" {
   description = "List of IDs of public subnets"
   value       = module.vpc.public_subnets
 }
 
+output "public_subnet_cidr_blocks" {
+  description = "List of IDs of public subnets"
+  value       = var.public_subnet_cidr_blocks
+}
+
 output "intra_subnets" {
   description = "List of IDs of intra subnets"
   value       = module.vpc.intra_subnets
+}
+
+output "intra_subnet_cidr_blocks" {
+  description = "List of IDs of intra subnets"
+  value       = var.intra_subnet_cidr_blocks
 }
 
 # NAT gateways
