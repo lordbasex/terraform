@@ -131,6 +131,7 @@ resource "aws_ecs_service" "aws-ecs-service" {
   force_new_deployment               = true
   deployment_maximum_percent         = 200
   deployment_minimum_healthy_percent = 0
+  enable_execute_command             = true
 
   network_configuration {
     assign_public_ip = false
