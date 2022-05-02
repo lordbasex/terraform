@@ -18,13 +18,21 @@ aws configure
 aws sts get-caller-identity
 ```
 
-## Install terraform and dependencies
+## CENTOS - Install terraform and dependencies
 ```
 sudo su
 yum install -y yum-utils
 yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
 yum -y install terraform git
 ```
+
+## DEBIAN/UBUNTU - Install terraform and dependencies
+```
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+sudo apt-add-repository "deb [arch=$(dpkg --print-architecture)] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+apt install terraform git
+```
+
 
 ### Verify the installation
 ```
